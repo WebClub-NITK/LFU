@@ -1,0 +1,7 @@
+[package]
+name = "lfu"
+version = "0.1.0"
+authors = ["chinmaydd <chinmay1dd@gmail.com>"]
+
+[dependencies]
+ixlist = { git = "https://github.com/bluss/ixlist" }
