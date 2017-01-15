@@ -44,3 +44,23 @@ void FrequencyNode::DeleteItem(int value) {
 bool FrequencyNode::Find(int value) {
     return this->itemNodes->ItemPresent(value);
 }
+
+void FrequencyNode::setPrev(FrequencyNode *prev) {
+    this->prev = prev;
+}
+
+void FrequencyNode::setnext(FrequencyNode *next) {
+    this->next = next;
+}
+
+FrequencyNode *FrequencyNode::getNext() {
+    return this->next;
+}
+
+FrequencyNode *FrequencyNode::getPrev() {
+    return this->prev;
+}
+
+int FrequencyNode::getFrequency() {
+    return this->frequency;
+}

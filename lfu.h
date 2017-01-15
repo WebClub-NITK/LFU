@@ -6,13 +6,16 @@
 #define EXAMPLE_CACHE_H
 
 #include <unordered_map>
+#include "FrequencyNode.h"
+
 using namespace std;
 
 class LFU{
 
 private:
-    struct FrequencyNode *root;
-    unordered_map<int, struct FrequencyNode *> frequencyMap;
+    FrequencyNode *root;
+    unordered_map<int, FrequencyNode *> itemFrequencyNodeMap;
+    unordered_map<int, FrequencyNode *> frequencyFrequencyNodeMap;
 public:
     LFU();
     ~LFU();

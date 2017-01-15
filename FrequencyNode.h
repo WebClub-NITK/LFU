@@ -25,6 +25,11 @@ public:
     void DeleteItem(int value);
     int AccessItem(int value);
     bool Find(int value);
+    void setPrev(FrequencyNode *prev);
+    void setnext(FrequencyNode *next);
+    FrequencyNode *getNext();
+    FrequencyNode *getPrev();
+    int getFrequency();
 };
 
 
