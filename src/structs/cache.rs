@@ -1,25 +1,21 @@
-extern crate ixlist;
 use std::collections::HashMap;
 
-use structs::FrequencyNode;
-use structs::ItemNode;
+use structs::FrequencyNodeList;
+use structs::ItemNodeList;
 
-// use self::ixlist::{List, Seek, Cursor};
-
-pub enum AccessFrequencyList {
-    Cons(Box<AccessFrequencyList>, FrequencyNode),
-    Nil
+pub struct Cache<'a, T: 'a> {
+    pub fnode_list: FrequencyNodeList<'a, T>,
+    pub lookup_table: HashMap<i32, &'a T>,
 }
 
-pub struct Cache {
-    pub af_list: AccessFrequencyList,
-    pub lookup_table: HashMap<i32, Box<ItemNode>>,
-}
+// TODO: Add functionality to load existing data onto cache?
+impl<'a, T> Cache<'a, T> {
+    pub fn new() -> Cache<'a, T> {
+        let fnode_list = FrequencyNodeList::new();
+        let lookup_table = HashMap::new();
 
-impl Cache {
-    pub fn new(af_list: AccessFrequencyList, lookup_table: HashMap<i32, Box<ItemNode>>) -> Cache {
         Cache {
-            af_list: af_list,
+            fnode_list: fnode_list,
             lookup_table: lookup_table
         }
     }
