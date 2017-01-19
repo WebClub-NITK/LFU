@@ -4,7 +4,8 @@ mod structs;
 use std::collections::HashMap;
 
 fn main() {
-    let c = Cache::<i32>::new();
+    let mut c = Cache::<i32>::new();
+    c.insert_element(23);
 }
 
 #[cfg(test)]

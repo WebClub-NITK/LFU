@@ -2,14 +2,18 @@ use structs::frequency_node::FrequencyNode;
 
 pub struct ItemNodeList<'a, T: 'a> {
     items: Option<Vec<T>>,
-    parent: &'a FrequencyNode<'a, T>,
+    parent: Option<&'a FrequencyNode<'a, T>>,
 }
 
 impl<'a, T> ItemNodeList<'a, T> {
-    pub fn new(value: i32, parent: &'a FrequencyNode<T>) -> ItemNodeList<'a, T> {
+    pub fn new() -> ItemNodeList<'a, T> {
         ItemNodeList {
             items: Some(Vec::new()),
-            parent: parent,
+            parent: None,
         }
+    }
+
+    pub fn set_parent(&mut self, parent: &'a FrequencyNode<T>) -> () {
+        self.parent = Some(parent);
     }
 }
