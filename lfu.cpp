@@ -2,7 +2,6 @@
 // Created by mohit on 12/1/17.
 //
 #include "lfu.h"
-#include "FrequencyNode.h"
 
 using namespace std;
 
@@ -39,39 +38,63 @@ void LFU::InsertItem(int value) {
         frequency = 1;
         // frequency node not present.
         if(this->frequencyFrequencyNodeMap.find(frequency) == this->frequencyFrequencyNodeMap.end()){
-            FrequencyNode *newNode = new FrequencyNode(frequency);
-            FrequencyNode *prevFreqNode = this->frequencyFrequencyNodeMap.find(frequency-1)->second;
-            newNode->setPrev(prevFreqNode);
-            newNode->setnext(prevFreqNode->getNext());
-            prevFreqNode->setnext(newNode);
-            newNode->AddItem(value);
-            // update frequency map and the value map
-            this->frequencyFrequencyNodeMap.insert({frequency, newNode});
-            this->itemFrequencyNodeMap.insert({value, newNode});
+            NewFrequencyNodeInsert(value, frequency);
+        }else{
+            // frequency node already present.
+            ExistingFrequencyInsert(value, frequency);
         }
     }
     // item already present in a frequency node.
     else{
         FrequencyNode *currNode = iter->second;
         // remove from this frequency node and keep it in the next frequency node.
-        currNode->DeleteItem(value);
-        frequency = currNode->getFrequency();
-        // have to check for the next frequency.
-        frequency = frequency + 1;
-        if(this->frequencyFrequencyNodeMap.find(frequency) == this->frequencyFrequencyNodeMap.end()){
+        InsertInNextFrequency(value, currNode);
+
+    }
+}
+
+void LFU::InsertInNextFrequency(int value, FrequencyNode *currNode) const {
+    currNode->DeleteItem(value);
+    int frequency = currNode->getFrequency();
+    // if the frequency node is empty. Remove it.
+    if(currNode->IsEmpty()){
+            // remove the currnode.
+            currNode->getNext()->setPrev(currNode->getPrev());
+            currNode->getPrev()->setnext(currNode->getNext());
+            free(currNode);
+        }
+    // have to check for the next frequency.
+    frequency = frequency + 1;
+    if(this->frequencyFrequencyNodeMap.find(frequency) == this->frequencyFrequencyNodeMap.end()){
             FrequencyNode *newNode = new FrequencyNode(frequency);
             newNode->setnext(currNode->getNext());
             newNode->setPrev(currNode);
             newNode->AddItem(value);
-            this->itemFrequencyNodeMap.insert({value, newNode)});
+            this->itemFrequencyNodeMap.insert({value, newNode});
             this->frequencyFrequencyNodeMap.insert({frequency, newNode});
         }else{
             FrequencyNode *nextNode = this->frequencyFrequencyNodeMap.find(frequency)->second;
             nextNode->AddItem(value);
             this->itemFrequencyNodeMap.insert({value, nextNode});
         }
+}
 
-    }
+void LFU::ExistingFrequencyInsert(int value, int frequency) const {
+    FrequencyNode *currFreqNode = this->frequencyFrequencyNodeMap.find(frequency)->second;
+    currFreqNode->AddItem(value);
+    this->itemFrequencyNodeMap.insert({value, currFreqNode});
+}
+
+void LFU::NewFrequencyNodeInsert(int value, int frequency) const {
+    FrequencyNode *newNode = new FrequencyNode(frequency);
+    FrequencyNode *prevFreqNode = this->frequencyFrequencyNodeMap.find(frequency - 1)->second;
+    newNode->setPrev(prevFreqNode);
+    newNode->setnext(prevFreqNode->getNext());
+    prevFreqNode->setnext(newNode);
+    newNode->AddItem(value);
+    // update frequency map and the value map
+    this->frequencyFrequencyNodeMap.insert({frequency, newNode});
+    this->itemFrequencyNodeMap.insert({value, newNode});
 }
 
 /**
@@ -87,13 +110,41 @@ void LFU::RemoveItem(int value) {
         FrequencyNode *currNode = iter->second;
         // delete value.
         currNode->DeleteItem(value);
+        // check if curr node is empty. If so remove the frequency node.
+        if(currNode->IsEmpty()){
+            currNode->getNext()->setPrev(currNode->getPrev());
+            currNode->getPrev()->setnext(currNode->getNext());
+            free(currNode);
+        }
         // remove from value_frequency-node map.
         this->itemFrequencyNodeMap.erase(value);
     }
 }
 
-void LFU::Access(int value) {
-    
+/**
+ * Access Item.
+ * Get item, increment the frequency.
+ * If not present insert the item in the cache.
+ *
+ * */
+bool LFU::Access(int value) {
+    unordered_map<int, FrequencyNode *>::const_iterator iter = this->itemFrequencyNodeMap.find(value);
+    int frequency;
+    if(iter == this->itemFrequencyNodeMap.end()){
+        // value not present. Insert with frequency 1.
+        frequency = 1;
+        if(this->frequencyFrequencyNodeMap.find(frequency) == this->frequencyFrequencyNodeMap.end()){
+            // create a new frequency new.
+            NewFrequencyNodeInsert(value, frequency);
+        }else{
+            ExistingFrequencyInsert(value, frequency);
+        }
+        return false;
+    }else{
+        FrequencyNode *currNode = iter->second;
+        InsertInNextFrequency(value, currNode);
+        return true;
+    }
 }
 
 int main(){

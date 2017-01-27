@@ -32,8 +32,8 @@ void FrequencyNode::AddItem(int value) {
     this->itemNodes->AddItem(value);
 }
 
-int FrequencyNode::AccessItem(int value) {
-    return this->itemNodes->GetItem();
+bool FrequencyNode::IsEmpty() {
+    return this->itemNodes->IsEmpty();
 }
 
 void FrequencyNode::DeleteItem(int value) {

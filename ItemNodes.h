@@ -27,6 +27,7 @@ public:
     void AddItem(int value);
     void RemoveItem(int value);
     int GetItem();
+    bool IsEmpty();
 };
 
 

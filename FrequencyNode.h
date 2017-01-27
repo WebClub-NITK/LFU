@@ -23,7 +23,7 @@ public:
     FrequencyNode(int frequency, FrequencyNode *prev, FrequencyNode *next);
     void AddItem(int value);
     void DeleteItem(int value);
-    int AccessItem(int value);
+    bool IsEmpty();
     bool Find(int value);
     void setPrev(FrequencyNode *prev);
     void setnext(FrequencyNode *next);

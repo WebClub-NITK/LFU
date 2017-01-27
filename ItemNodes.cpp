@@ -57,3 +57,7 @@ int ItemNodes::GetItem() {
 bool ItemNodes::ItemPresent(int value) {
     return this->ItemIndexMap.find(value) == this->ItemIndexMap.end();
 }
+
+bool ItemNodes::IsEmpty() {
+    return this->items.empty();
+}
