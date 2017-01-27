@@ -74,12 +74,26 @@ void LFU::InsertItem(int value) {
     }
 }
 
-void LFU::RemoveItem(int value) {
+/**
+ * Remove item.
+ * check in the map if the value is present in the cache or not.
+ *  - If yes, Remove it from the pointer.
+ *  - else, continue;
+ * */
 
+void LFU::RemoveItem(int value) {
+    unordered_map<int, FrequencyNode *>::const_iterator iter = this->itemFrequencyNodeMap.find(value);
+    if(iter != this->itemFrequencyNodeMap.end()){
+        FrequencyNode *currNode = iter->second;
+        // delete value.
+        currNode->DeleteItem(value);
+        // remove from value_frequency-node map.
+        this->itemFrequencyNodeMap.erase(value);
+    }
 }
 
 void LFU::Access(int value) {
-
+    
 }
 
 int main(){
