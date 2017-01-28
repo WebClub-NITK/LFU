@@ -24,11 +24,11 @@ public:
     void RemoveItem(int value);
     bool Access(int value);
 
-    void NewFrequencyNodeInsert(int value, int frequency) const;
+    void NewFrequencyNodeInsert(int value, int frequency);
 
-    void ExistingFrequencyInsert(int value, int frequency) const;
+    void ExistingFrequencyInsert(int value, int frequency) ;
 
-    void InsertInNextFrequency(int value, FrequencyNode *currNode) const;
+    void InsertInNextFrequency(int value, FrequencyNode *currNode);
 };
 
 

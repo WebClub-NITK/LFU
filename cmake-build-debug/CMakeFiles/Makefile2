@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/mohit/LFU
 CMAKE_BINARY_DIR = /home/mohit/LFU/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/dbsg.dir
+# Target rules for target CMakeFiles/LFU.dir
 
 # All Build rule for target.
-CMakeFiles/dbsg.dir/all:
-	$(MAKE) -f CMakeFiles/dbsg.dir/build.make CMakeFiles/dbsg.dir/depend
-	$(MAKE) -f CMakeFiles/dbsg.dir/build.make CMakeFiles/dbsg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target dbsg"
-.PHONY : CMakeFiles/dbsg.dir/all
+CMakeFiles/LFU.dir/all:
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/depend
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target LFU"
+.PHONY : CMakeFiles/LFU.dir/all
 
 # Include target in all.
-all: CMakeFiles/dbsg.dir/all
+all: CMakeFiles/LFU.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/dbsg.dir/rule: cmake_check_build_system
+CMakeFiles/LFU.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mohit/LFU/cmake-build-debug/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/dbsg.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/LFU.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mohit/LFU/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/dbsg.dir/rule
+.PHONY : CMakeFiles/LFU.dir/rule
 
 # Convenience name for target.
-dbsg: CMakeFiles/dbsg.dir/rule
+LFU: CMakeFiles/LFU.dir/rule
 
-.PHONY : dbsg
-
-# clean rule for target.
-CMakeFiles/dbsg.dir/clean:
-	$(MAKE) -f CMakeFiles/dbsg.dir/build.make CMakeFiles/dbsg.dir/clean
-.PHONY : CMakeFiles/dbsg.dir/clean
+.PHONY : LFU
 
 # clean rule for target.
-clean: CMakeFiles/dbsg.dir/clean
+CMakeFiles/LFU.dir/clean:
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/clean
+.PHONY : CMakeFiles/LFU.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/LFU.dir/clean
 
 .PHONY : clean
 

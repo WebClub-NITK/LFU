@@ -7,7 +7,11 @@
 
 
 #include <unordered_map>
+#include <vector>
 #include "FrequencyNode.h"
+
+class FrequencyNode;
+
 
 using namespace std;
 
@@ -16,13 +20,13 @@ class ItemNodes {
 private:
     int numItems;
     vector<int> items;
-    FrequencyNode *parent;
+    FrequencyNode* parent;
     unordered_map<int, int> ItemIndexMap;
 public:
     ItemNodes();
     ~ItemNodes();
-    ItemNodes(int value, FrequencyNode *parent);
-    ItemNodes(FrequencyNode *parent);
+    ItemNodes(int value, FrequencyNode* parent);
+    ItemNodes(FrequencyNode* parent);
     bool ItemPresent(int value);
     void AddItem(int value);
     void RemoveItem(int value);

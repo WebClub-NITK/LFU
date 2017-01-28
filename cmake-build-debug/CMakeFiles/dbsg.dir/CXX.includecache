@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mohit/LFU/headers/FrequencyNode.h
+vector
+-
+ItemNodes.h
+/home/mohit/LFU/headers/ItemNodes.h
+
+/home/mohit/LFU/headers/ItemNodes.h
+unordered_map
+-
+vector
+-
+FrequencyNode.h
+/home/mohit/LFU/headers/FrequencyNode.h
+
+/home/mohit/LFU/src/FrequencyNode.cpp
+../headers/FrequencyNode.h
+/home/mohit/LFU/headers/FrequencyNode.h
+
+/home/mohit/LFU/src/ItemNodes.cpp
+../headers/ItemNodes.h
+/home/mohit/LFU/headers/ItemNodes.h
+
+/home/mohit/LFU/test/LFUTest.cpp
+LFUTest.h
+/home/mohit/LFU/test/LFUTest.h
+
+/home/mohit/LFU/test/LFUTest.h
+cppunit/TestFixture.h
+/home/mohit/LFU/test/cppunit/TestFixture.h
+cppunit/TestSuite.h
+/home/mohit/LFU/test/cppunit/TestSuite.h
+cppunit/TestResult.h
+/home/mohit/LFU/test/cppunit/TestResult.h
+cppunit/TestCaller.h
+/home/mohit/LFU/test/cppunit/TestCaller.h
+cppunit/TestAssert.h
+/home/mohit/LFU/test/cppunit/TestAssert.h
+

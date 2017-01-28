@@ -1,7 +1,7 @@
 //
 // Created by mohit on 12/1/17.
 //
-#include "lfu.h"
+#include "../headers/lfu.h"
 
 using namespace std;
 
@@ -53,7 +53,7 @@ void LFU::InsertItem(int value) {
     }
 }
 
-void LFU::InsertInNextFrequency(int value, FrequencyNode *currNode) const {
+void LFU::InsertInNextFrequency(int value, FrequencyNode *currNode) {
     currNode->DeleteItem(value);
     int frequency = currNode->getFrequency();
     // if the frequency node is empty. Remove it.
@@ -79,13 +79,13 @@ void LFU::InsertInNextFrequency(int value, FrequencyNode *currNode) const {
         }
 }
 
-void LFU::ExistingFrequencyInsert(int value, int frequency) const {
+void LFU::ExistingFrequencyInsert(int value, int frequency) {
     FrequencyNode *currFreqNode = this->frequencyFrequencyNodeMap.find(frequency)->second;
     currFreqNode->AddItem(value);
     this->itemFrequencyNodeMap.insert({value, currFreqNode});
 }
 
-void LFU::NewFrequencyNodeInsert(int value, int frequency) const {
+void LFU::NewFrequencyNodeInsert(int value, int frequency) {
     FrequencyNode *newNode = new FrequencyNode(frequency);
     FrequencyNode *prevFreqNode = this->frequencyFrequencyNodeMap.find(frequency - 1)->second;
     newNode->setPrev(prevFreqNode);

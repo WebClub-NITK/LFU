@@ -2,11 +2,14 @@
 // Created by mohit on 12/1/17.
 //
 
+
 #ifndef LFU_FREQUENCYNODE_H
 #define LFU_FREQUENCYNODE_H
 
 #include <vector>
 #include "ItemNodes.h"
+
+class ItemNodes;
 using namespace std;
 
 class FrequencyNode {

@@ -1,1 +1,1 @@
-/usr/bin/c++   -g   CMakeFiles/dbsg.dir/lfu.cpp.o CMakeFiles/dbsg.dir/ItemNodes.cpp.o CMakeFiles/dbsg.dir/FrequencyNode.cpp.o  -o dbsg -rdynamic 
+/usr/bin/c++   -g   CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o CMakeFiles/dbsg.dir/test/LFUTest.cpp.o  -o dbsg -rdynamic 

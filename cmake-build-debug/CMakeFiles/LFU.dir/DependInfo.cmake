@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/mohit/LFU/src/FrequencyNode.cpp" "/home/mohit/LFU/cmake-build-debug/CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o"
-  "/home/mohit/LFU/src/ItemNodes.cpp" "/home/mohit/LFU/cmake-build-debug/CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o"
-  "/home/mohit/LFU/test/LFUTest.cpp" "/home/mohit/LFU/cmake-build-debug/CMakeFiles/dbsg.dir/test/LFUTest.cpp.o"
+  "/home/mohit/LFU/src/FrequencyNode.cpp" "/home/mohit/LFU/cmake-build-debug/CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o"
+  "/home/mohit/LFU/src/ItemNodes.cpp" "/home/mohit/LFU/cmake-build-debug/CMakeFiles/LFU.dir/src/ItemNodes.cpp.o"
+  "/home/mohit/LFU/test/LFUTest.cpp" "/home/mohit/LFU/cmake-build-debug/CMakeFiles/LFU.dir/test/LFUTest.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -37,8 +37,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mohit/LFU/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="dbsg">
-				<Option output="/home/mohit/LFU/cmake-build-debug/dbsg" prefix_auto="0" extension_auto="0"/>
+			<Target title="LFU">
+				<Option output="/home/mohit/LFU/cmake-build-debug/LFU" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/mohit/LFU/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -54,14 +54,14 @@
 					<Add directory="/usr/include/c++/4.8/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mohit/LFU/cmake-build-debug/Makefile&quot;  VERBOSE=1 dbsg"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mohit/LFU/cmake-build-debug/Makefile&quot;  VERBOSE=1 LFU"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mohit/LFU/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/mohit/LFU/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mohit/LFU/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="dbsg/fast">
-				<Option output="/home/mohit/LFU/cmake-build-debug/dbsg" prefix_auto="0" extension_auto="0"/>
+			<Target title="LFU/fast">
+				<Option output="/home/mohit/LFU/cmake-build-debug/LFU" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/mohit/LFU/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -77,30 +77,33 @@
 					<Add directory="/usr/include/c++/4.8/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mohit/LFU/cmake-build-debug/Makefile&quot;  VERBOSE=1 dbsg/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mohit/LFU/cmake-build-debug/Makefile&quot;  VERBOSE=1 LFU/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mohit/LFU/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/mohit/LFU/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mohit/LFU/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/mohit/LFU/FrequencyNode.cpp">
-			<Option target="dbsg"/>
+		<Unit filename="/home/mohit/LFU/headers/FrequencyNode.h">
+			<Option target="LFU"/>
 		</Unit>
-		<Unit filename="/home/mohit/LFU/FrequencyNode.h">
-			<Option target="dbsg"/>
+		<Unit filename="/home/mohit/LFU/headers/ItemNodes.h">
+			<Option target="LFU"/>
 		</Unit>
-		<Unit filename="/home/mohit/LFU/ItemNodes.cpp">
-			<Option target="dbsg"/>
+		<Unit filename="/home/mohit/LFU/headers/lfu.h">
+			<Option target="LFU"/>
 		</Unit>
-		<Unit filename="/home/mohit/LFU/ItemNodes.h">
-			<Option target="dbsg"/>
+		<Unit filename="/home/mohit/LFU/src/FrequencyNode.cpp">
+			<Option target="LFU"/>
 		</Unit>
-		<Unit filename="/home/mohit/LFU/lfu.cpp">
-			<Option target="dbsg"/>
+		<Unit filename="/home/mohit/LFU/src/ItemNodes.cpp">
+			<Option target="LFU"/>
 		</Unit>
-		<Unit filename="/home/mohit/LFU/lfu.h">
-			<Option target="dbsg"/>
+		<Unit filename="/home/mohit/LFU/test/LFUTest.cpp">
+			<Option target="LFU"/>
+		</Unit>
+		<Unit filename="/home/mohit/LFU/test/LFUTest.h">
+			<Option target="LFU"/>
 		</Unit>
 		<Unit filename="/home/mohit/LFU/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

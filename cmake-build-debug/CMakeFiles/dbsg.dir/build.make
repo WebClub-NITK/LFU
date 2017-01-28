@@ -57,90 +57,90 @@ include CMakeFiles/dbsg.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/dbsg.dir/flags.make
 
-CMakeFiles/dbsg.dir/lfu.cpp.o: CMakeFiles/dbsg.dir/flags.make
-CMakeFiles/dbsg.dir/lfu.cpp.o: ../lfu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dbsg.dir/lfu.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dbsg.dir/lfu.cpp.o -c /home/mohit/LFU/lfu.cpp
+CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o: CMakeFiles/dbsg.dir/flags.make
+CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o: ../src/ItemNodes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o -c /home/mohit/LFU/src/ItemNodes.cpp
 
-CMakeFiles/dbsg.dir/lfu.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dbsg.dir/lfu.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohit/LFU/lfu.cpp > CMakeFiles/dbsg.dir/lfu.cpp.i
+CMakeFiles/dbsg.dir/src/ItemNodes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dbsg.dir/src/ItemNodes.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohit/LFU/src/ItemNodes.cpp > CMakeFiles/dbsg.dir/src/ItemNodes.cpp.i
 
-CMakeFiles/dbsg.dir/lfu.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dbsg.dir/lfu.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohit/LFU/lfu.cpp -o CMakeFiles/dbsg.dir/lfu.cpp.s
+CMakeFiles/dbsg.dir/src/ItemNodes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dbsg.dir/src/ItemNodes.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohit/LFU/src/ItemNodes.cpp -o CMakeFiles/dbsg.dir/src/ItemNodes.cpp.s
 
-CMakeFiles/dbsg.dir/lfu.cpp.o.requires:
+CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o.requires:
 
-.PHONY : CMakeFiles/dbsg.dir/lfu.cpp.o.requires
+.PHONY : CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o.requires
 
-CMakeFiles/dbsg.dir/lfu.cpp.o.provides: CMakeFiles/dbsg.dir/lfu.cpp.o.requires
-	$(MAKE) -f CMakeFiles/dbsg.dir/build.make CMakeFiles/dbsg.dir/lfu.cpp.o.provides.build
-.PHONY : CMakeFiles/dbsg.dir/lfu.cpp.o.provides
+CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o.provides: CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o.requires
+	$(MAKE) -f CMakeFiles/dbsg.dir/build.make CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o.provides.build
+.PHONY : CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o.provides
 
-CMakeFiles/dbsg.dir/lfu.cpp.o.provides.build: CMakeFiles/dbsg.dir/lfu.cpp.o
-
-
-CMakeFiles/dbsg.dir/ItemNodes.cpp.o: CMakeFiles/dbsg.dir/flags.make
-CMakeFiles/dbsg.dir/ItemNodes.cpp.o: ../ItemNodes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/dbsg.dir/ItemNodes.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dbsg.dir/ItemNodes.cpp.o -c /home/mohit/LFU/ItemNodes.cpp
-
-CMakeFiles/dbsg.dir/ItemNodes.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dbsg.dir/ItemNodes.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohit/LFU/ItemNodes.cpp > CMakeFiles/dbsg.dir/ItemNodes.cpp.i
-
-CMakeFiles/dbsg.dir/ItemNodes.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dbsg.dir/ItemNodes.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohit/LFU/ItemNodes.cpp -o CMakeFiles/dbsg.dir/ItemNodes.cpp.s
-
-CMakeFiles/dbsg.dir/ItemNodes.cpp.o.requires:
-
-.PHONY : CMakeFiles/dbsg.dir/ItemNodes.cpp.o.requires
-
-CMakeFiles/dbsg.dir/ItemNodes.cpp.o.provides: CMakeFiles/dbsg.dir/ItemNodes.cpp.o.requires
-	$(MAKE) -f CMakeFiles/dbsg.dir/build.make CMakeFiles/dbsg.dir/ItemNodes.cpp.o.provides.build
-.PHONY : CMakeFiles/dbsg.dir/ItemNodes.cpp.o.provides
-
-CMakeFiles/dbsg.dir/ItemNodes.cpp.o.provides.build: CMakeFiles/dbsg.dir/ItemNodes.cpp.o
+CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o.provides.build: CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o
 
 
-CMakeFiles/dbsg.dir/FrequencyNode.cpp.o: CMakeFiles/dbsg.dir/flags.make
-CMakeFiles/dbsg.dir/FrequencyNode.cpp.o: ../FrequencyNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/dbsg.dir/FrequencyNode.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dbsg.dir/FrequencyNode.cpp.o -c /home/mohit/LFU/FrequencyNode.cpp
+CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o: CMakeFiles/dbsg.dir/flags.make
+CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o: ../src/FrequencyNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o -c /home/mohit/LFU/src/FrequencyNode.cpp
 
-CMakeFiles/dbsg.dir/FrequencyNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dbsg.dir/FrequencyNode.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohit/LFU/FrequencyNode.cpp > CMakeFiles/dbsg.dir/FrequencyNode.cpp.i
+CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohit/LFU/src/FrequencyNode.cpp > CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.i
 
-CMakeFiles/dbsg.dir/FrequencyNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dbsg.dir/FrequencyNode.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohit/LFU/FrequencyNode.cpp -o CMakeFiles/dbsg.dir/FrequencyNode.cpp.s
+CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohit/LFU/src/FrequencyNode.cpp -o CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.s
 
-CMakeFiles/dbsg.dir/FrequencyNode.cpp.o.requires:
+CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o.requires:
 
-.PHONY : CMakeFiles/dbsg.dir/FrequencyNode.cpp.o.requires
+.PHONY : CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o.requires
 
-CMakeFiles/dbsg.dir/FrequencyNode.cpp.o.provides: CMakeFiles/dbsg.dir/FrequencyNode.cpp.o.requires
-	$(MAKE) -f CMakeFiles/dbsg.dir/build.make CMakeFiles/dbsg.dir/FrequencyNode.cpp.o.provides.build
-.PHONY : CMakeFiles/dbsg.dir/FrequencyNode.cpp.o.provides
+CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o.provides: CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o.requires
+	$(MAKE) -f CMakeFiles/dbsg.dir/build.make CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o.provides.build
+.PHONY : CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o.provides
 
-CMakeFiles/dbsg.dir/FrequencyNode.cpp.o.provides.build: CMakeFiles/dbsg.dir/FrequencyNode.cpp.o
+CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o.provides.build: CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o
+
+
+CMakeFiles/dbsg.dir/test/LFUTest.cpp.o: CMakeFiles/dbsg.dir/flags.make
+CMakeFiles/dbsg.dir/test/LFUTest.cpp.o: ../test/LFUTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/dbsg.dir/test/LFUTest.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dbsg.dir/test/LFUTest.cpp.o -c /home/mohit/LFU/test/LFUTest.cpp
+
+CMakeFiles/dbsg.dir/test/LFUTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dbsg.dir/test/LFUTest.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohit/LFU/test/LFUTest.cpp > CMakeFiles/dbsg.dir/test/LFUTest.cpp.i
+
+CMakeFiles/dbsg.dir/test/LFUTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dbsg.dir/test/LFUTest.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohit/LFU/test/LFUTest.cpp -o CMakeFiles/dbsg.dir/test/LFUTest.cpp.s
+
+CMakeFiles/dbsg.dir/test/LFUTest.cpp.o.requires:
+
+.PHONY : CMakeFiles/dbsg.dir/test/LFUTest.cpp.o.requires
+
+CMakeFiles/dbsg.dir/test/LFUTest.cpp.o.provides: CMakeFiles/dbsg.dir/test/LFUTest.cpp.o.requires
+	$(MAKE) -f CMakeFiles/dbsg.dir/build.make CMakeFiles/dbsg.dir/test/LFUTest.cpp.o.provides.build
+.PHONY : CMakeFiles/dbsg.dir/test/LFUTest.cpp.o.provides
+
+CMakeFiles/dbsg.dir/test/LFUTest.cpp.o.provides.build: CMakeFiles/dbsg.dir/test/LFUTest.cpp.o
 
 
 # Object files for target dbsg
 dbsg_OBJECTS = \
-"CMakeFiles/dbsg.dir/lfu.cpp.o" \
-"CMakeFiles/dbsg.dir/ItemNodes.cpp.o" \
-"CMakeFiles/dbsg.dir/FrequencyNode.cpp.o"
+"CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o" \
+"CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o" \
+"CMakeFiles/dbsg.dir/test/LFUTest.cpp.o"
 
 # External object files for target dbsg
 dbsg_EXTERNAL_OBJECTS =
 
-dbsg: CMakeFiles/dbsg.dir/lfu.cpp.o
-dbsg: CMakeFiles/dbsg.dir/ItemNodes.cpp.o
-dbsg: CMakeFiles/dbsg.dir/FrequencyNode.cpp.o
+dbsg: CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o
+dbsg: CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o
+dbsg: CMakeFiles/dbsg.dir/test/LFUTest.cpp.o
 dbsg: CMakeFiles/dbsg.dir/build.make
 dbsg: CMakeFiles/dbsg.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable dbsg"
@@ -151,9 +151,9 @@ CMakeFiles/dbsg.dir/build: dbsg
 
 .PHONY : CMakeFiles/dbsg.dir/build
 
-CMakeFiles/dbsg.dir/requires: CMakeFiles/dbsg.dir/lfu.cpp.o.requires
-CMakeFiles/dbsg.dir/requires: CMakeFiles/dbsg.dir/ItemNodes.cpp.o.requires
-CMakeFiles/dbsg.dir/requires: CMakeFiles/dbsg.dir/FrequencyNode.cpp.o.requires
+CMakeFiles/dbsg.dir/requires: CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o.requires
+CMakeFiles/dbsg.dir/requires: CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o.requires
+CMakeFiles/dbsg.dir/requires: CMakeFiles/dbsg.dir/test/LFUTest.cpp.o.requires
 
 .PHONY : CMakeFiles/dbsg.dir/requires
 

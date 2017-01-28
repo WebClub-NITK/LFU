@@ -2,7 +2,7 @@
 // Created by mohit on 12/1/17.
 //
 
-#include "FrequencyNode.h"
+#include "../headers/FrequencyNode.h"
 
 FrequencyNode::FrequencyNode() {
     this->frequency = 0;

@@ -2,7 +2,7 @@
 // Created by mohit on 12/1/17.
 //
 
-#include "ItemNodes.h"
+#include "../headers/ItemNodes.h"
 
 ItemNodes::ItemNodes() {
     this->numItems = 0;
@@ -12,12 +12,12 @@ ItemNodes::~ItemNodes() {
     delete(this);
 }
 
-ItemNodes::ItemNodes(FrequencyNode *parent) {
+ItemNodes::ItemNodes(FrequencyNode* parent) {
     this->numItems = 0;
     this->parent = parent;
 }
 
-ItemNodes::ItemNodes(int value, FrequencyNode *parent) {
+ItemNodes::ItemNodes(int value, FrequencyNode* parent) {
     this->numItems = 0;
     this->parent = parent;
     AddItem(value);

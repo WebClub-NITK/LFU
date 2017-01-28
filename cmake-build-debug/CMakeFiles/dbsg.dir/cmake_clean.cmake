@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/dbsg.dir/lfu.cpp.o"
-  "CMakeFiles/dbsg.dir/ItemNodes.cpp.o"
-  "CMakeFiles/dbsg.dir/FrequencyNode.cpp.o"
+  "CMakeFiles/dbsg.dir/src/ItemNodes.cpp.o"
+  "CMakeFiles/dbsg.dir/src/FrequencyNode.cpp.o"
+  "CMakeFiles/dbsg.dir/test/LFUTest.cpp.o"
   "dbsg.pdb"
   "dbsg"
 )
