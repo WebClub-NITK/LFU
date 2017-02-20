@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/LFU.dir/src/ItemNodes.cpp.o"
-  "CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o"
-  "CMakeFiles/LFU.dir/test/LFUTest.cpp.o"
+  "CMakeFiles/LFU.dir/bin/Lfu.cpp.o"
+  "CMakeFiles/LFU.dir/bin/LfuTest.cpp.o"
   "LFU.pdb"
   "LFU"
 )

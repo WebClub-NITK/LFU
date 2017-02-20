@@ -123,86 +123,59 @@ LFU/fast:
 	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/build
 .PHONY : LFU/fast
 
-src/FrequencyNode.o: src/FrequencyNode.cpp.o
+bin/Lfu.o: bin/Lfu.cpp.o
 
-.PHONY : src/FrequencyNode.o
-
-# target to build an object file
-src/FrequencyNode.cpp.o:
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o
-.PHONY : src/FrequencyNode.cpp.o
-
-src/FrequencyNode.i: src/FrequencyNode.cpp.i
-
-.PHONY : src/FrequencyNode.i
-
-# target to preprocess a source file
-src/FrequencyNode.cpp.i:
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/src/FrequencyNode.cpp.i
-.PHONY : src/FrequencyNode.cpp.i
-
-src/FrequencyNode.s: src/FrequencyNode.cpp.s
-
-.PHONY : src/FrequencyNode.s
-
-# target to generate assembly for a file
-src/FrequencyNode.cpp.s:
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/src/FrequencyNode.cpp.s
-.PHONY : src/FrequencyNode.cpp.s
-
-src/ItemNodes.o: src/ItemNodes.cpp.o
-
-.PHONY : src/ItemNodes.o
+.PHONY : bin/Lfu.o
 
 # target to build an object file
-src/ItemNodes.cpp.o:
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/src/ItemNodes.cpp.o
-.PHONY : src/ItemNodes.cpp.o
+bin/Lfu.cpp.o:
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/Lfu.cpp.o
+.PHONY : bin/Lfu.cpp.o
 
-src/ItemNodes.i: src/ItemNodes.cpp.i
+bin/Lfu.i: bin/Lfu.cpp.i
 
-.PHONY : src/ItemNodes.i
+.PHONY : bin/Lfu.i
 
 # target to preprocess a source file
-src/ItemNodes.cpp.i:
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/src/ItemNodes.cpp.i
-.PHONY : src/ItemNodes.cpp.i
+bin/Lfu.cpp.i:
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/Lfu.cpp.i
+.PHONY : bin/Lfu.cpp.i
 
-src/ItemNodes.s: src/ItemNodes.cpp.s
+bin/Lfu.s: bin/Lfu.cpp.s
 
-.PHONY : src/ItemNodes.s
+.PHONY : bin/Lfu.s
 
 # target to generate assembly for a file
-src/ItemNodes.cpp.s:
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/src/ItemNodes.cpp.s
-.PHONY : src/ItemNodes.cpp.s
+bin/Lfu.cpp.s:
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/Lfu.cpp.s
+.PHONY : bin/Lfu.cpp.s
 
-test/LFUTest.o: test/LFUTest.cpp.o
+bin/LfuTest.o: bin/LfuTest.cpp.o
 
-.PHONY : test/LFUTest.o
+.PHONY : bin/LfuTest.o
 
 # target to build an object file
-test/LFUTest.cpp.o:
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/test/LFUTest.cpp.o
-.PHONY : test/LFUTest.cpp.o
+bin/LfuTest.cpp.o:
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/LfuTest.cpp.o
+.PHONY : bin/LfuTest.cpp.o
 
-test/LFUTest.i: test/LFUTest.cpp.i
+bin/LfuTest.i: bin/LfuTest.cpp.i
 
-.PHONY : test/LFUTest.i
+.PHONY : bin/LfuTest.i
 
 # target to preprocess a source file
-test/LFUTest.cpp.i:
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/test/LFUTest.cpp.i
-.PHONY : test/LFUTest.cpp.i
+bin/LfuTest.cpp.i:
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/LfuTest.cpp.i
+.PHONY : bin/LfuTest.cpp.i
 
-test/LFUTest.s: test/LFUTest.cpp.s
+bin/LfuTest.s: bin/LfuTest.cpp.s
 
-.PHONY : test/LFUTest.s
+.PHONY : bin/LfuTest.s
 
 # target to generate assembly for a file
-test/LFUTest.cpp.s:
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/test/LFUTest.cpp.s
-.PHONY : test/LFUTest.cpp.s
+bin/LfuTest.cpp.s:
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/LfuTest.cpp.s
+.PHONY : bin/LfuTest.cpp.s
 
 # Help Target
 help:
@@ -213,15 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... LFU"
-	@echo "... src/FrequencyNode.o"
-	@echo "... src/FrequencyNode.i"
-	@echo "... src/FrequencyNode.s"
-	@echo "... src/ItemNodes.o"
-	@echo "... src/ItemNodes.i"
-	@echo "... src/ItemNodes.s"
-	@echo "... test/LFUTest.o"
-	@echo "... test/LFUTest.i"
-	@echo "... test/LFUTest.s"
+	@echo "... bin/Lfu.o"
+	@echo "... bin/Lfu.i"
+	@echo "... bin/Lfu.s"
+	@echo "... bin/LfuTest.o"
+	@echo "... bin/LfuTest.i"
+	@echo "... bin/LfuTest.s"
 .PHONY : help
 
 

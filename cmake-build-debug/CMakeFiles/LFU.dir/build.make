@@ -57,93 +57,67 @@ include CMakeFiles/LFU.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/LFU.dir/flags.make
 
-CMakeFiles/LFU.dir/src/ItemNodes.cpp.o: CMakeFiles/LFU.dir/flags.make
-CMakeFiles/LFU.dir/src/ItemNodes.cpp.o: ../src/ItemNodes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LFU.dir/src/ItemNodes.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LFU.dir/src/ItemNodes.cpp.o -c /home/mohit/LFU/src/ItemNodes.cpp
+CMakeFiles/LFU.dir/bin/Lfu.cpp.o: CMakeFiles/LFU.dir/flags.make
+CMakeFiles/LFU.dir/bin/Lfu.cpp.o: ../bin/Lfu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LFU.dir/bin/Lfu.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LFU.dir/bin/Lfu.cpp.o -c /home/mohit/LFU/bin/Lfu.cpp
 
-CMakeFiles/LFU.dir/src/ItemNodes.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LFU.dir/src/ItemNodes.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohit/LFU/src/ItemNodes.cpp > CMakeFiles/LFU.dir/src/ItemNodes.cpp.i
+CMakeFiles/LFU.dir/bin/Lfu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LFU.dir/bin/Lfu.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohit/LFU/bin/Lfu.cpp > CMakeFiles/LFU.dir/bin/Lfu.cpp.i
 
-CMakeFiles/LFU.dir/src/ItemNodes.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LFU.dir/src/ItemNodes.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohit/LFU/src/ItemNodes.cpp -o CMakeFiles/LFU.dir/src/ItemNodes.cpp.s
+CMakeFiles/LFU.dir/bin/Lfu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LFU.dir/bin/Lfu.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohit/LFU/bin/Lfu.cpp -o CMakeFiles/LFU.dir/bin/Lfu.cpp.s
 
-CMakeFiles/LFU.dir/src/ItemNodes.cpp.o.requires:
+CMakeFiles/LFU.dir/bin/Lfu.cpp.o.requires:
 
-.PHONY : CMakeFiles/LFU.dir/src/ItemNodes.cpp.o.requires
+.PHONY : CMakeFiles/LFU.dir/bin/Lfu.cpp.o.requires
 
-CMakeFiles/LFU.dir/src/ItemNodes.cpp.o.provides: CMakeFiles/LFU.dir/src/ItemNodes.cpp.o.requires
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/src/ItemNodes.cpp.o.provides.build
-.PHONY : CMakeFiles/LFU.dir/src/ItemNodes.cpp.o.provides
+CMakeFiles/LFU.dir/bin/Lfu.cpp.o.provides: CMakeFiles/LFU.dir/bin/Lfu.cpp.o.requires
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/Lfu.cpp.o.provides.build
+.PHONY : CMakeFiles/LFU.dir/bin/Lfu.cpp.o.provides
 
-CMakeFiles/LFU.dir/src/ItemNodes.cpp.o.provides.build: CMakeFiles/LFU.dir/src/ItemNodes.cpp.o
-
-
-CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o: CMakeFiles/LFU.dir/flags.make
-CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o: ../src/FrequencyNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o -c /home/mohit/LFU/src/FrequencyNode.cpp
-
-CMakeFiles/LFU.dir/src/FrequencyNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LFU.dir/src/FrequencyNode.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohit/LFU/src/FrequencyNode.cpp > CMakeFiles/LFU.dir/src/FrequencyNode.cpp.i
-
-CMakeFiles/LFU.dir/src/FrequencyNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LFU.dir/src/FrequencyNode.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohit/LFU/src/FrequencyNode.cpp -o CMakeFiles/LFU.dir/src/FrequencyNode.cpp.s
-
-CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o.requires:
-
-.PHONY : CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o.requires
-
-CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o.provides: CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o.requires
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o.provides.build
-.PHONY : CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o.provides
-
-CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o.provides.build: CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o
+CMakeFiles/LFU.dir/bin/Lfu.cpp.o.provides.build: CMakeFiles/LFU.dir/bin/Lfu.cpp.o
 
 
-CMakeFiles/LFU.dir/test/LFUTest.cpp.o: CMakeFiles/LFU.dir/flags.make
-CMakeFiles/LFU.dir/test/LFUTest.cpp.o: ../test/LFUTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LFU.dir/test/LFUTest.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LFU.dir/test/LFUTest.cpp.o -c /home/mohit/LFU/test/LFUTest.cpp
+CMakeFiles/LFU.dir/bin/LfuTest.cpp.o: CMakeFiles/LFU.dir/flags.make
+CMakeFiles/LFU.dir/bin/LfuTest.cpp.o: ../bin/LfuTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LFU.dir/bin/LfuTest.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LFU.dir/bin/LfuTest.cpp.o -c /home/mohit/LFU/bin/LfuTest.cpp
 
-CMakeFiles/LFU.dir/test/LFUTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LFU.dir/test/LFUTest.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohit/LFU/test/LFUTest.cpp > CMakeFiles/LFU.dir/test/LFUTest.cpp.i
+CMakeFiles/LFU.dir/bin/LfuTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LFU.dir/bin/LfuTest.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohit/LFU/bin/LfuTest.cpp > CMakeFiles/LFU.dir/bin/LfuTest.cpp.i
 
-CMakeFiles/LFU.dir/test/LFUTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LFU.dir/test/LFUTest.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohit/LFU/test/LFUTest.cpp -o CMakeFiles/LFU.dir/test/LFUTest.cpp.s
+CMakeFiles/LFU.dir/bin/LfuTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LFU.dir/bin/LfuTest.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohit/LFU/bin/LfuTest.cpp -o CMakeFiles/LFU.dir/bin/LfuTest.cpp.s
 
-CMakeFiles/LFU.dir/test/LFUTest.cpp.o.requires:
+CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.requires:
 
-.PHONY : CMakeFiles/LFU.dir/test/LFUTest.cpp.o.requires
+.PHONY : CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.requires
 
-CMakeFiles/LFU.dir/test/LFUTest.cpp.o.provides: CMakeFiles/LFU.dir/test/LFUTest.cpp.o.requires
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/test/LFUTest.cpp.o.provides.build
-.PHONY : CMakeFiles/LFU.dir/test/LFUTest.cpp.o.provides
+CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.provides: CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.requires
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.provides.build
+.PHONY : CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.provides
 
-CMakeFiles/LFU.dir/test/LFUTest.cpp.o.provides.build: CMakeFiles/LFU.dir/test/LFUTest.cpp.o
+CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.provides.build: CMakeFiles/LFU.dir/bin/LfuTest.cpp.o
 
 
 # Object files for target LFU
 LFU_OBJECTS = \
-"CMakeFiles/LFU.dir/src/ItemNodes.cpp.o" \
-"CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o" \
-"CMakeFiles/LFU.dir/test/LFUTest.cpp.o"
+"CMakeFiles/LFU.dir/bin/Lfu.cpp.o" \
+"CMakeFiles/LFU.dir/bin/LfuTest.cpp.o"
 
 # External object files for target LFU
 LFU_EXTERNAL_OBJECTS =
 
-LFU: CMakeFiles/LFU.dir/src/ItemNodes.cpp.o
-LFU: CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o
-LFU: CMakeFiles/LFU.dir/test/LFUTest.cpp.o
+LFU: CMakeFiles/LFU.dir/bin/Lfu.cpp.o
+LFU: CMakeFiles/LFU.dir/bin/LfuTest.cpp.o
 LFU: CMakeFiles/LFU.dir/build.make
 LFU: CMakeFiles/LFU.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable LFU"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable LFU"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LFU.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -151,9 +125,8 @@ CMakeFiles/LFU.dir/build: LFU
 
 .PHONY : CMakeFiles/LFU.dir/build
 
-CMakeFiles/LFU.dir/requires: CMakeFiles/LFU.dir/src/ItemNodes.cpp.o.requires
-CMakeFiles/LFU.dir/requires: CMakeFiles/LFU.dir/src/FrequencyNode.cpp.o.requires
-CMakeFiles/LFU.dir/requires: CMakeFiles/LFU.dir/test/LFUTest.cpp.o.requires
+CMakeFiles/LFU.dir/requires: CMakeFiles/LFU.dir/bin/Lfu.cpp.o.requires
+CMakeFiles/LFU.dir/requires: CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.requires
 
 .PHONY : CMakeFiles/LFU.dir/requires
 

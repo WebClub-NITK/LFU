@@ -20,6 +20,14 @@ vector
 FrequencyNode.h
 /home/mohit/LFU/headers/FrequencyNode.h
 
+/home/mohit/LFU/headers/lfu.h
+unordered_map
+-
+FrequencyNode.h
+/home/mohit/LFU/headers/FrequencyNode.h
+ItemNodes.h
+/home/mohit/LFU/headers/ItemNodes.h
+
 /home/mohit/LFU/src/FrequencyNode.cpp
 ../headers/FrequencyNode.h
 /home/mohit/LFU/headers/FrequencyNode.h
@@ -43,4 +51,8 @@ cppunit/TestCaller.h
 /home/mohit/LFU/test/cppunit/TestCaller.h
 cppunit/TestAssert.h
 /home/mohit/LFU/test/cppunit/TestAssert.h
+cppunit/ui/text/TestRunner.h
+/home/mohit/LFU/test/cppunit/ui/text/TestRunner.h
+../headers/lfu.h
+/home/mohit/LFU/headers/lfu.h
 
