@@ -81,40 +81,40 @@ CMakeFiles/LFU.dir/bin/Lfu.cpp.o.provides: CMakeFiles/LFU.dir/bin/Lfu.cpp.o.requ
 CMakeFiles/LFU.dir/bin/Lfu.cpp.o.provides.build: CMakeFiles/LFU.dir/bin/Lfu.cpp.o
 
 
-CMakeFiles/LFU.dir/bin/LfuTest.cpp.o: CMakeFiles/LFU.dir/flags.make
-CMakeFiles/LFU.dir/bin/LfuTest.cpp.o: ../bin/LfuTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LFU.dir/bin/LfuTest.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LFU.dir/bin/LfuTest.cpp.o -c /home/mohit/LFU/bin/LfuTest.cpp
+CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o: CMakeFiles/LFU.dir/flags.make
+CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o: ../bin/FrequencyList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o -c /home/mohit/LFU/bin/FrequencyList.cpp
 
-CMakeFiles/LFU.dir/bin/LfuTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LFU.dir/bin/LfuTest.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohit/LFU/bin/LfuTest.cpp > CMakeFiles/LFU.dir/bin/LfuTest.cpp.i
+CMakeFiles/LFU.dir/bin/FrequencyList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LFU.dir/bin/FrequencyList.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohit/LFU/bin/FrequencyList.cpp > CMakeFiles/LFU.dir/bin/FrequencyList.cpp.i
 
-CMakeFiles/LFU.dir/bin/LfuTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LFU.dir/bin/LfuTest.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohit/LFU/bin/LfuTest.cpp -o CMakeFiles/LFU.dir/bin/LfuTest.cpp.s
+CMakeFiles/LFU.dir/bin/FrequencyList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LFU.dir/bin/FrequencyList.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohit/LFU/bin/FrequencyList.cpp -o CMakeFiles/LFU.dir/bin/FrequencyList.cpp.s
 
-CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.requires:
+CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o.requires:
 
-.PHONY : CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.requires
+.PHONY : CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o.requires
 
-CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.provides: CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.requires
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.provides.build
-.PHONY : CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.provides
+CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o.provides: CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o.requires
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o.provides.build
+.PHONY : CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o.provides
 
-CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.provides.build: CMakeFiles/LFU.dir/bin/LfuTest.cpp.o
+CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o.provides.build: CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o
 
 
 # Object files for target LFU
 LFU_OBJECTS = \
 "CMakeFiles/LFU.dir/bin/Lfu.cpp.o" \
-"CMakeFiles/LFU.dir/bin/LfuTest.cpp.o"
+"CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o"
 
 # External object files for target LFU
 LFU_EXTERNAL_OBJECTS =
 
 LFU: CMakeFiles/LFU.dir/bin/Lfu.cpp.o
-LFU: CMakeFiles/LFU.dir/bin/LfuTest.cpp.o
+LFU: CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o
 LFU: CMakeFiles/LFU.dir/build.make
 LFU: CMakeFiles/LFU.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mohit/LFU/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable LFU"
@@ -126,7 +126,7 @@ CMakeFiles/LFU.dir/build: LFU
 .PHONY : CMakeFiles/LFU.dir/build
 
 CMakeFiles/LFU.dir/requires: CMakeFiles/LFU.dir/bin/Lfu.cpp.o.requires
-CMakeFiles/LFU.dir/requires: CMakeFiles/LFU.dir/bin/LfuTest.cpp.o.requires
+CMakeFiles/LFU.dir/requires: CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o.requires
 
 .PHONY : CMakeFiles/LFU.dir/requires
 

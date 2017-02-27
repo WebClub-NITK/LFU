@@ -5,18 +5,16 @@
 #ifndef LFU_FREQUENCYLIST_H
 #define LFU_FREQUENCYLIST_H
 
-#include "unordered_map"
+#include <unordered_map>
 #include "Constants.h"
 
 using namespace std;
-struct Node {
-    int ItemName;
-};
+
 
 class FrequencyList {
 private:
     int count;
-    unordered_map<Node, int> nodelist;
+    unordered_map<int, int> nodelist;
     FrequencyList *left;
     FrequencyList *right;
 public:
@@ -24,15 +22,17 @@ public:
     FrequencyList(int count);
     FrequencyList(int count, FrequencyList *left, FrequencyList *right);
     ~FrequencyList();
-    void AddNode(Node node);
-    void LookUpNode(Node node);
-    void DeleteNode(Node node);
-    bool NodePresent(Node node);
+    void AddNode(int node);
+    void LookUpNode(int node);
+    void DeleteNode(int node);
+    bool NodePresent(int node);
+    void PrintNodeList();
     int GetCount();
     void SetPrevious(FrequencyList *left);
     void SetNext(FrequencyList *right);
     FrequencyList *GetPrevious();
     FrequencyList *GetNext();
+    bool IsEmpty();
 };
 
 

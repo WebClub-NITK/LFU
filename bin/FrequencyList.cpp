@@ -2,6 +2,7 @@
 // Created by mohit on 20/2/17.
 //
 
+#include <iostream>
 #include "../header/FrequencyList.h"
 
 
@@ -29,16 +30,11 @@ FrequencyList::~FrequencyList() {
 
 
 // Support functions
-void FrequencyList::AddNode(Node node) {
-    // Check if the element is already present.
-    if(NodePresent(node)){
-        // remove from this node and enter in the next one.
-    }else{
-        this->nodelist.insert(node, 1);
-    }
+void FrequencyList::AddNode(int node) {
+    this->nodelist[node] = 1;
 }
 
-void FrequencyList::DeleteNode(Node node) {
+void FrequencyList::DeleteNode(int node) {
     if(NodePresent(node)){
         // node present.
         this->nodelist.erase(node);
@@ -47,7 +43,7 @@ void FrequencyList::DeleteNode(Node node) {
     }
 }
 
-void FrequencyList::LookUpNode(Node node) {
+void FrequencyList::LookUpNode(int node) {
     // Node present in the node list.
     if(NodePresent(node)){
         // increase the count and remove from this node.
@@ -56,12 +52,17 @@ void FrequencyList::LookUpNode(Node node) {
     }
 }
 
-bool FrequencyList::NodePresent(Node node) {
-    unordered_map::const_iterator iter= this->nodelist.find(node);
-    if(iter == this->nodelist.end()){
-        return false;
+void FrequencyList::PrintNodeList() {
+    unordered_map<int, int>::const_iterator iter = this->nodelist.begin();
+    while(iter!=this->nodelist.end()){
+        cout<<iter->first<<" ";
+        iter++;
     }
-    return true;
+}
+
+bool FrequencyList::NodePresent(int node) {
+    unordered_map<int, int>::const_iterator iter= this->nodelist.find(node);
+    return !(iter == this->nodelist.end());
 }
 
 int FrequencyList::GetCount() {
@@ -82,4 +83,8 @@ FrequencyList* FrequencyList::GetNext() {
 
 FrequencyList* FrequencyList::GetPrevious() {
     return this->left;
+}
+
+bool FrequencyList::IsEmpty() {
+    return this->nodelist.empty();
 }

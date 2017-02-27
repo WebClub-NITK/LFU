@@ -123,6 +123,33 @@ LFU/fast:
 	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/build
 .PHONY : LFU/fast
 
+bin/FrequencyList.o: bin/FrequencyList.cpp.o
+
+.PHONY : bin/FrequencyList.o
+
+# target to build an object file
+bin/FrequencyList.cpp.o:
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o
+.PHONY : bin/FrequencyList.cpp.o
+
+bin/FrequencyList.i: bin/FrequencyList.cpp.i
+
+.PHONY : bin/FrequencyList.i
+
+# target to preprocess a source file
+bin/FrequencyList.cpp.i:
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/FrequencyList.cpp.i
+.PHONY : bin/FrequencyList.cpp.i
+
+bin/FrequencyList.s: bin/FrequencyList.cpp.s
+
+.PHONY : bin/FrequencyList.s
+
+# target to generate assembly for a file
+bin/FrequencyList.cpp.s:
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/FrequencyList.cpp.s
+.PHONY : bin/FrequencyList.cpp.s
+
 bin/Lfu.o: bin/Lfu.cpp.o
 
 .PHONY : bin/Lfu.o
@@ -150,33 +177,6 @@ bin/Lfu.cpp.s:
 	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/Lfu.cpp.s
 .PHONY : bin/Lfu.cpp.s
 
-bin/LfuTest.o: bin/LfuTest.cpp.o
-
-.PHONY : bin/LfuTest.o
-
-# target to build an object file
-bin/LfuTest.cpp.o:
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/LfuTest.cpp.o
-.PHONY : bin/LfuTest.cpp.o
-
-bin/LfuTest.i: bin/LfuTest.cpp.i
-
-.PHONY : bin/LfuTest.i
-
-# target to preprocess a source file
-bin/LfuTest.cpp.i:
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/LfuTest.cpp.i
-.PHONY : bin/LfuTest.cpp.i
-
-bin/LfuTest.s: bin/LfuTest.cpp.s
-
-.PHONY : bin/LfuTest.s
-
-# target to generate assembly for a file
-bin/LfuTest.cpp.s:
-	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/LfuTest.cpp.s
-.PHONY : bin/LfuTest.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... LFU"
+	@echo "... bin/FrequencyList.o"
+	@echo "... bin/FrequencyList.i"
+	@echo "... bin/FrequencyList.s"
 	@echo "... bin/Lfu.o"
 	@echo "... bin/Lfu.i"
 	@echo "... bin/Lfu.s"
-	@echo "... bin/LfuTest.o"
-	@echo "... bin/LfuTest.i"
-	@echo "... bin/LfuTest.s"
 .PHONY : help
 
 

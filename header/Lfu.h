@@ -9,7 +9,7 @@
 
 class Lfu {
 private:
-    unordered_map<Node, FrequencyList*> NodeFrequencyListMap;
+    unordered_map<int, FrequencyList*> NodeFrequencyListMap;
     unordered_map<int, FrequencyList*> CountFrequencyListMap;
     FrequencyList *head;
 public:
@@ -19,8 +19,10 @@ public:
     void Retrieve(int value);
     void Evict(int value);
     struct Node CreateNode(int value);
-    bool NodePresent(Node node);
+    bool NodePresent(int node);
     bool FrequencyNodePresent(int count);
+    bool IsNodeEmpty(FrequencyList *frequencyList);
+    void PrintLfu();
 };
 
 

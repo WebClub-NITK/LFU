@@ -1,1 +1,1 @@
-/usr/bin/c++   -g   CMakeFiles/LFU.dir/bin/Lfu.cpp.o CMakeFiles/LFU.dir/bin/LfuTest.cpp.o  -o LFU -rdynamic 
+/usr/bin/c++    -std=c++11 -lcppunit -g   CMakeFiles/LFU.dir/bin/Lfu.cpp.o CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o  -o LFU -rdynamic 

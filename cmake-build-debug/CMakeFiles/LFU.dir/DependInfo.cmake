@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/mohit/LFU/bin/FrequencyList.cpp" "/home/mohit/LFU/cmake-build-debug/CMakeFiles/LFU.dir/bin/FrequencyList.cpp.o"
   "/home/mohit/LFU/bin/Lfu.cpp" "/home/mohit/LFU/cmake-build-debug/CMakeFiles/LFU.dir/bin/Lfu.cpp.o"
-  "/home/mohit/LFU/bin/LfuTest.cpp" "/home/mohit/LFU/cmake-build-debug/CMakeFiles/LFU.dir/bin/LfuTest.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

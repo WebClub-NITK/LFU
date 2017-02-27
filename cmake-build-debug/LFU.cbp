@@ -84,10 +84,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/mohit/LFU/bin/Lfu.cpp">
+		<Unit filename="/home/mohit/LFU/bin/FrequencyList.cpp">
 			<Option target="LFU"/>
 		</Unit>
-		<Unit filename="/home/mohit/LFU/bin/LfuTest.cpp">
+		<Unit filename="/home/mohit/LFU/bin/Lfu.cpp">
 			<Option target="LFU"/>
 		</Unit>
 		<Unit filename="/home/mohit/LFU/CMakeLists.txt">
