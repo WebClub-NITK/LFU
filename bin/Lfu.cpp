@@ -48,10 +48,7 @@ void Lfu::Set(int value) {
             newFrequencyNode->AddNode(node);
             this->NodeFrequencyListMap[node] = newFrequencyNode;
         }
-
-        /**
-         * Remove the frequency node if the frequency node is empty.
-         * */
+        
         if(IsNodeEmpty(frequencyList)){
             frequencyList->GetNext()->SetPrevious(frequencyList->GetPrevious());
             frequencyList->GetPrevious()->SetNext(frequencyList->GetNext());
@@ -90,9 +87,7 @@ void Lfu::Evict(int value) {
     if(NodePresent(node)){
         FrequencyList *presentFrequencyNode = this->NodeFrequencyListMap[node];
         presentFrequencyNode->DeleteNode(node);
-        /**
-         * If Frequency Node is empty. Delete the node.
-         * */
+
         if(IsNodeEmpty(presentFrequencyNode)){
             if(presentFrequencyNode->GetNext()!=NULL)
                 presentFrequencyNode->GetNext()->SetPrevious(presentFrequencyNode->GetPrevious());
