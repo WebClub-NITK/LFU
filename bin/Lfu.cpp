@@ -16,70 +16,85 @@ Lfu::~Lfu() {
     this->CountFrequencyListMap.clear();
 }
 
+
+
+void Lfu::NodeAlreadyPresent(int node){
+    unordered_map<int, FrequencyList *>::const_iterator iter1 = this->NodeFrequencyListMap.find(node);
+    FrequencyList *frequencyList = iter1->second;
+    int freq = frequencyList->GetCount();
+    // remove the node from current frequency node.
+    frequencyList->DeleteNode(node);
+
+    // Increment the frequency
+    freq = freq + 1;
+    // check if the node is present.
+    if(FrequencyNodePresent(freq)){
+        FrequencyList *frequencyList1 = this->CountFrequencyListMap.find(freq)->second;
+        frequencyList1->AddNode(node);
+        this->NodeFrequencyListMap[node] = frequencyList1;
+    }else{
+        FrequencyList *newFrequencyNode = new FrequencyList(freq);
+        newFrequencyNode->SetPrevious(frequencyList);
+        newFrequencyNode->SetNext(frequencyList->GetNext());
+        this->CountFrequencyListMap[freq] = newFrequencyNode;
+        frequencyList->SetNext(newFrequencyNode);
+
+        // adjust the pointers accordingly.
+        frequencyList->GetNext()->SetPrevious(newFrequencyNode);
+        frequencyList->SetNext(newFrequencyNode);
+
+        newFrequencyNode->AddNode(node);
+        this->NodeFrequencyListMap[node] = newFrequencyNode;
+    }
+
+    if(IsNodeEmpty(frequencyList)){
+        frequencyList->GetNext()->SetPrevious(frequencyList->GetPrevious());
+        frequencyList->GetPrevious()->SetNext(frequencyList->GetNext());
+        this->CountFrequencyListMap.erase(frequencyList->GetCount());
+        free(frequencyList);
+    }
+}
+void Lfu::NewNodeSet(int node) {
+    // else put it the first node.
+    int freq = 1;
+    if(FrequencyNodePresent(freq)){
+        FrequencyList *frequencyList1 = this->CountFrequencyListMap.find(freq)->second;
+        frequencyList1->AddNode(node);
+        this->NodeFrequencyListMap[node] = frequencyList1;
+    }else{
+        FrequencyList *newFrequencyNode = new FrequencyList(freq);
+        this->CountFrequencyListMap[freq] = newFrequencyNode;
+        newFrequencyNode->SetPrevious(this->head);
+        newFrequencyNode->SetNext(this->head->GetNext());
+        newFrequencyNode->AddNode(node);
+        // make next of head as new frequency node
+        this->head->SetNext(newFrequencyNode);
+        if(newFrequencyNode->GetNext()!=NULL)
+            newFrequencyNode->GetNext()->SetPrevious(newFrequencyNode);
+        this->NodeFrequencyListMap[node] = newFrequencyNode;
+    }
+}
+
 void Lfu::Set(int value) {
     // add the item in the cache.
     // Check if the item is already present. If yes increment the count and put it in the next frequency node.
     int node = value;
     if(NodePresent(node)){
-        unordered_map<int, FrequencyList *>::const_iterator iter1 = this->NodeFrequencyListMap.find(node);
-        FrequencyList *frequencyList = iter1->second;
-        int freq = frequencyList->GetCount();
-        // remove the node from current frequency node.
-        frequencyList->DeleteNode(node);
-
-        // Increment the frequency
-        freq = freq + 1;
-        // check if the node is present.
-        if(FrequencyNodePresent(freq)){
-            FrequencyList *frequencyList1 = this->CountFrequencyListMap.find(freq)->second;
-            frequencyList1->AddNode(node);
-            this->NodeFrequencyListMap[node] = frequencyList1;
-        }else{
-            FrequencyList *newFrequencyNode = new FrequencyList(freq);
-            newFrequencyNode->SetPrevious(frequencyList);
-            newFrequencyNode->SetNext(frequencyList->GetNext());
-            this->CountFrequencyListMap[freq] = newFrequencyNode;
-            frequencyList->SetNext(newFrequencyNode);
-
-            // adjust the pointers accordingly.
-            frequencyList->GetNext()->SetPrevious(newFrequencyNode);
-            frequencyList->SetNext(newFrequencyNode);
-
-            newFrequencyNode->AddNode(node);
-            this->NodeFrequencyListMap[node] = newFrequencyNode;
-        }
-        
-        if(IsNodeEmpty(frequencyList)){
-            frequencyList->GetNext()->SetPrevious(frequencyList->GetPrevious());
-            frequencyList->GetPrevious()->SetNext(frequencyList->GetNext());
-            this->CountFrequencyListMap.erase(frequencyList->GetCount());
-            free(frequencyList);
-        }
+        NodeAlreadyPresent(node);
     }else{
-        // else put it the first node.
-        int freq = 1;
-        if(FrequencyNodePresent(freq)){
-            FrequencyList *frequencyList1 = this->CountFrequencyListMap.find(freq)->second;
-            frequencyList1->AddNode(node);
-            this->NodeFrequencyListMap[node] = frequencyList1;
-        }else{
-            FrequencyList *newFrequencyNode = new FrequencyList(freq);
-            this->CountFrequencyListMap[freq] = newFrequencyNode;
-            newFrequencyNode->SetPrevious(this->head);
-            newFrequencyNode->SetNext(this->head->GetNext());
-            newFrequencyNode->AddNode(node);
-            // make next of head as new frequency node
-            this->head->SetNext(newFrequencyNode);
-            if(newFrequencyNode->GetNext()!=NULL)
-                newFrequencyNode->GetNext()->SetPrevious(newFrequencyNode);
-            this->NodeFrequencyListMap[node] = newFrequencyNode;
-        }
+        NewNodeSet(node);
     }
 
 }
 
 void Lfu::Retrieve(int value) {
-    Set(value);
+    int node = value;
+    if(NodePresent(node)){
+        NodeAlreadyPresent(node);
+    }else{
+        // Dont Know if new node has to be added!!
+        NewNodeSet(node);
+    }
 }
 
 void Lfu::Evict(int value) {

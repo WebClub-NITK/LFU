@@ -14,8 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44b742cd-af90-4042-843b-c8861511ec9c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Lfu.cpp" afterPath="$PROJECT_DIR$/bin/Lfu.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header/Lfu.h" afterPath="$PROJECT_DIR$/header/Lfu.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,11 +31,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Lfu.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Lfu.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/Lfu.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+            <state relative-caret-position="1692">
+              <caret line="94" column="50" lean-forward="false" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
               <folding>
                 <element signature="e#39#58#0" expanded="true" />
               </folding>
@@ -75,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lfu.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Lfu.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/header/Lfu.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            <state relative-caret-position="468">
+              <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -136,12 +136,12 @@
         <option value="$PROJECT_DIR$/headers/ItemNodes.h" />
         <option value="$PROJECT_DIR$/bin/Lfu.h" />
         <option value="$PROJECT_DIR$/header/Constants.h" />
-        <option value="$PROJECT_DIR$/header/Lfu.h" />
         <option value="$PROJECT_DIR$/header/FrequencyList.h" />
         <option value="$PROJECT_DIR$/header/LfuTest.h" />
         <option value="$PROJECT_DIR$/src/FrequencyList.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/bin/LfuTest.cpp" />
+        <option value="$PROJECT_DIR$/header/Lfu.h" />
         <option value="$PROJECT_DIR$/bin/Lfu.cpp" />
       </list>
     </option>
@@ -448,12 +448,12 @@
       <workItem from="1487591950794" duration="11591000" />
       <workItem from="1488159136010" duration="15238000" />
       <workItem from="1488267098119" duration="82000" />
-      <workItem from="1488563517309" duration="140000" />
+      <workItem from="1488563517309" duration="486000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54769000" />
+    <option name="totallyTimeSpent" value="55115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="46" width="1315" height="722" extended-state="4" />
@@ -510,12 +510,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/bin/Lfu.cpp</url>
-          <line>21</line>
+          <line>80</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/bin/Lfu.cpp</url>
-          <line>85</line>
+          <line>100</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -649,14 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/FrequencyList.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
@@ -664,22 +656,6 @@
           <folding>
             <element signature="e#39#58#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header/FrequencyList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header/Lfu.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -701,11 +677,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/Lfu.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+        <state relative-caret-position="1692">
+          <caret line="94" column="50" lean-forward="false" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
           <folding>
             <element signature="e#39#58#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header/FrequencyList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header/Lfu.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>

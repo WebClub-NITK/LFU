@@ -23,6 +23,8 @@ public:
     bool FrequencyNodePresent(int count);
     bool IsNodeEmpty(FrequencyList *frequencyList);
     void PrintLfu();
+    void NodeAlreadyPresent(int node);
+    void NewNodeSet(int node);
 };
 
 
