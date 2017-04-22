@@ -1,59 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lfu;
 import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.HashMap;
 
-class Pair<U, V> {
-	U first;
-	V second;
-	Pair(){}
-	Pair(U u, V v){
-		first = u;
-		second = v;
-	}
-}
-
-class FrequencyList<T> {
-	int frequency;
-	LinkedList<T> list;
-
-	FrequencyList(){}
-	FrequencyList(int f){
-		frequency = f;
-	}
-
-	public void add(T t){
-		list.add(t);
-	}
-
-	public void remove(T t){
-		list.remove(t);
-	}
-
-	public T get(int index){
-		return list.get(index);
-	}
-
-	public ListIterator<T> listIterator(int index){
-		return list.listIterator(index);
-	}
-	
-	public int getFrequency(){
-		return frequency;
-	}
-
-	public int size(){
-		return list.size();
-	}
-}
-
 /**
  * @author salman
+ * @param <T>
  */
 public class LFU<T> {
 
@@ -62,6 +14,13 @@ public class LFU<T> {
 	private HashMap<Integer, ListIterator< FrequencyList<T> > > frequencyMap;
 	private int count = 0;
 
+        LFU() {
+            lfuList = new LinkedList< FrequencyList<T> >();
+            nodeFrequencyMap = new HashMap<T, Pair<Integer, ListIterator<T> > >();
+            frequencyMap = new HashMap<Integer, ListIterator< FrequencyList<T> > >();
+            count = 0;
+        }
+        
 	public void insert(T item){
 		// If frequencyList is empty
 		if(!frequencyMap.containsKey(1)){
@@ -76,11 +35,11 @@ public class LFU<T> {
 		count++;
 	}
 
-	public void lookup(T item){
+	public boolean lookup(T item){
 		// If item does not exist
 		if(!nodeFrequencyMap.containsKey(item)){
 			insert(item);
-			return;
+			return false;
 		}
 		// If item exists
 		// Get FrequencyList of item
@@ -110,6 +69,7 @@ public class LFU<T> {
 		// Update item frequency
 		nodeIt = frequencyList.listIterator(frequencyList.size() - 1);
 		nodeFrequencyMap.put(item, new Pair(frequency, nodeIt));
+                return true;
 	}
 
 	public T delete(){
@@ -129,5 +89,12 @@ public class LFU<T> {
 		count--;
 		return item;
 	}
-
+        
+        public static void main(String args[]) {
+            LFU<Integer> freqlfu = new LFU();
+            freqlfu.insert(10);
+            System.out.println(freqlfu.lookup(10));
+            
+            System.out.println(freqlfu.lookup(20));
+        }
 }
