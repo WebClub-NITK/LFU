@@ -16,6 +16,10 @@ The project aims to build a library which will provide a cache implementation th
 
 * If you are looking to contribute code, kindly look at the [CONTRIBUTING.md](CONTRIBUTING.md) file for information as to how to contribute to the repository!
 
+* If you are implementing the above logic in a programming language X, make sure you name your git branch as `X` and raise a PR for the same. If it already exists, try making it better!
+
+* Benchmark your programs against a test suite. We will be adding the module soon. Comparing different implementations hence becomes easier.
+
 * If there are any improvements, raise issues. Try to not ping specific members since some of us might be busy. We will respond soon. 
 
 ## LICENSE
