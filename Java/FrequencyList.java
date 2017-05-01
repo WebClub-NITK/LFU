@@ -7,11 +7,11 @@ class FrequencyList<T> {
 	LinkedList<T> list;
 
 	FrequencyList(){
-            list = new LinkedList<T>();
-        }
+		list = new LinkedList<T>();
+	}
 	FrequencyList(int f){
-            list = new LinkedList<T>();
-            frequency = f;
+		list = new LinkedList<T>();
+		frequency = f;
 	}
 
 	public void add(T t){
@@ -22,19 +22,19 @@ class FrequencyList<T> {
 		list.remove(t);
 	}
 
+	public ListIterator<T> listIterator(int index){
+		return list.listIterator(index);
+	}	
+
+	public int size(){
+		return list.size();
+	}
+
 	public T get(int index){
 		return list.get(index);
 	}
 
-	public ListIterator<T> listIterator(int index){
-		return list.listIterator(index);
-	}
-	
 	public int getFrequency(){
 		return frequency;
-	}
-
-	public int size(){
-		return list.size();
 	}
 }
