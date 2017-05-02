@@ -27,7 +27,9 @@ public:
     void DeleteNode(int node);
     bool NodePresent(int node);
     void PrintNodeList();
+    unordered_map<int, int> GetNodeList();
     int GetCount();
+    void SetCount(int val);
     void SetPrevious(FrequencyList *left);
     void SetNext(FrequencyList *right);
     FrequencyList *GetPrevious();

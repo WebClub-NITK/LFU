@@ -18,6 +18,7 @@ public:
     void Set(int value);
     void Retrieve(int value);
     void Evict(int value);
+    void EvictFromCache();
     struct Node CreateNode(int value);
     bool NodePresent(int node);
     bool FrequencyNodePresent(int count);

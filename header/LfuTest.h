@@ -23,8 +23,10 @@ public:
     void AddValue(int value);
     void LookUpValue(int value);
     void Evict(int value);
+    void EvictFromCache();
     void PrintLfu();
-    void setup();
+    void setUp();
+    void tearDown();
     void testAdd();
     CppUnit::TestSuite *suite();
 };

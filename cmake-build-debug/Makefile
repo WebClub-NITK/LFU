@@ -177,6 +177,33 @@ bin/Lfu.cpp.s:
 	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/Lfu.cpp.s
 .PHONY : bin/Lfu.cpp.s
 
+bin/LfuTest.o: bin/LfuTest.cpp.o
+
+.PHONY : bin/LfuTest.o
+
+# target to build an object file
+bin/LfuTest.cpp.o:
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/LfuTest.cpp.o
+.PHONY : bin/LfuTest.cpp.o
+
+bin/LfuTest.i: bin/LfuTest.cpp.i
+
+.PHONY : bin/LfuTest.i
+
+# target to preprocess a source file
+bin/LfuTest.cpp.i:
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/LfuTest.cpp.i
+.PHONY : bin/LfuTest.cpp.i
+
+bin/LfuTest.s: bin/LfuTest.cpp.s
+
+.PHONY : bin/LfuTest.s
+
+# target to generate assembly for a file
+bin/LfuTest.cpp.s:
+	$(MAKE) -f CMakeFiles/LFU.dir/build.make CMakeFiles/LFU.dir/bin/LfuTest.cpp.s
+.PHONY : bin/LfuTest.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... bin/Lfu.o"
 	@echo "... bin/Lfu.i"
 	@echo "... bin/Lfu.s"
+	@echo "... bin/LfuTest.o"
+	@echo "... bin/LfuTest.i"
+	@echo "... bin/LfuTest.s"
 .PHONY : help
 
 

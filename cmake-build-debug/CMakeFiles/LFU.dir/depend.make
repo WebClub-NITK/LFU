@@ -10,3 +10,9 @@ CMakeFiles/LFU.dir/bin/Lfu.cpp.o: ../header/Constants.h
 CMakeFiles/LFU.dir/bin/Lfu.cpp.o: ../header/FrequencyList.h
 CMakeFiles/LFU.dir/bin/Lfu.cpp.o: ../header/Lfu.h
 
+CMakeFiles/LFU.dir/bin/LfuTest.cpp.o: ../bin/LfuTest.cpp
+CMakeFiles/LFU.dir/bin/LfuTest.cpp.o: ../header/Constants.h
+CMakeFiles/LFU.dir/bin/LfuTest.cpp.o: ../header/FrequencyList.h
+CMakeFiles/LFU.dir/bin/LfuTest.cpp.o: ../header/Lfu.h
+CMakeFiles/LFU.dir/bin/LfuTest.cpp.o: ../header/LfuTest.h
+

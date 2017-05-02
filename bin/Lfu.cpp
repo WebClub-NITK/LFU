@@ -97,10 +97,33 @@ void Lfu::Retrieve(int value) {
     }
 }
 
+
+void Lfu::EvictFromCache() {
+    FrequencyList *root = this->head;
+    if (root->GetNext() == NULL)
+    {
+        return;
+    }
+    FrequencyList *nextNode = root->GetNext();
+    unordered_map<int,int>::iterator it = nextNode->GetNodeList().begin();
+    nextNode->DeleteNode(it->first);
+    this->NodeFrequencyListMap.erase(it->first);
+    if (nextNode->IsEmpty())
+    {
+        this->CountFrequencyListMap.erase(nextNode->GetCount());
+        if (nextNode->GetPrevious() != NULL)
+            nextNode->GetPrevious()->SetNext(nextNode->GetNext());
+        if (nextNode->GetNext() != NULL)
+            nextNode->GetNext()->SetPrevious(nextNode->GetPrevious());
+        free(nextNode);
+    }
+}
+
 void Lfu::Evict(int value) {
     int node = value;
     if(NodePresent(node)){
         FrequencyList *presentFrequencyNode = this->NodeFrequencyListMap[node];
+        this->NodeFrequencyListMap.erase(node);
         presentFrequencyNode->DeleteNode(node);
 
         if(IsNodeEmpty(presentFrequencyNode)){
@@ -136,12 +159,14 @@ bool Lfu::IsNodeEmpty(FrequencyList *frequencyList) {
 void Lfu::PrintLfu() {
     FrequencyList *Node = this->head;
     while(Node!=NULL){
+        cout<<Node->GetCount()<<" :: Count "<<endl;
         Node->PrintNodeList();
         Node = Node->GetNext();
+        cout<<"--------------\n";
     }
 }
 
-int main(){
+/*int main(){
     Lfu *lfu = new Lfu();
     lfu->Set(1);
     lfu->Set(1);
@@ -154,4 +179,4 @@ int main(){
     lfu->PrintLfu();
     return 0;
 }
-
+*/

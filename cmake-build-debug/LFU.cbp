@@ -90,6 +90,9 @@
 		<Unit filename="/home/mohit/LFU/bin/Lfu.cpp">
 			<Option target="LFU"/>
 		</Unit>
+		<Unit filename="/home/mohit/LFU/bin/LfuTest.cpp">
+			<Option target="LFU"/>
+		</Unit>
 		<Unit filename="/home/mohit/LFU/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

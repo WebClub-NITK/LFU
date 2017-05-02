@@ -58,6 +58,15 @@ void FrequencyList::PrintNodeList() {
         cout<<iter->first<<" ";
         iter++;
     }
+    cout<<endl;
+}
+
+void FrequencyList::SetCount(int val) {
+    this->count = val;
+}
+
+unordered_map<int, int> FrequencyList::GetNodeList() {
+    return this->nodelist;
 }
 
 bool FrequencyList::NodePresent(int node) {
