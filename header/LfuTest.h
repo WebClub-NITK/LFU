@@ -28,6 +28,9 @@ public:
     void setUp();
     void tearDown();
     void testAdd();
+    void testAdd1();
+    void testAdd2();
+    void testAdd3();
     CppUnit::TestSuite *suite();
 };
 
