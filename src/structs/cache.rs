@@ -5,9 +5,9 @@ use std::hash::Hash;
 use structs::item_node::ItemNode;
 use structs::frequency_node::{FrequencyNode, FrequencyNodeList};
 
-
 pub enum CacheError {
-    InsertError
+    InsertError,
+    AccessError
 }
 
 // Let's assume that we will be having a maximum of 50 elements in the cache?
@@ -19,10 +19,12 @@ pub struct Cache<T> where T: Hash {
 }
 
 // TODO: Add functionality to load existing data onto cache?
-impl<T> Cache<T> where T: Hash + Eq + Clone {
+impl<T> Cache<T> where T: Hash + Eq + Clone + Copy {
     pub fn new() -> Cache<T> {
-        let fnode_list = FrequencyNodeList::new();
+        let mut fnode_list = FrequencyNodeList::new();
         let lookup_table = HashMap::new();
+
+        fnode_list.push(FrequencyNode::new(1));
 
         Cache {
             fnode_list: fnode_list,
@@ -31,7 +33,24 @@ impl<T> Cache<T> where T: Hash + Eq + Clone {
     }
 
     pub fn insert_element(&mut self, value: T) -> Result<(), CacheError> {
-        // Check if item already in cache. We will assume that it is an access in that case.
+        if self.lookup_table.contains_key(&value) {
+            Err(CacheError::InsertError)
+        } else {
+            // Well, the idx will anyways be 0.
+            let temp_node = FrequencyNode::new(1);
+            let idx = self.fnode_list.iter().position(|ref r| **r == temp_node).unwrap();
+            
+            if let Some(fnode) = self.fnode_list.get_mut(idx) {
+                fnode.item_nodes.push(ItemNode::new(value, 1));
+            }
+           
+            self.lookup_table.insert(value, 1);
+
+            Ok(())
+        }
+    }
+
+    pub fn access_element(&mut self, value: T) -> Result<(), CacheError> {
         if self.lookup_table.contains_key(&value) {
             let parent = *self.lookup_table.get(&value).unwrap();
             let new_parent = parent + 1;
@@ -58,12 +77,31 @@ impl<T> Cache<T> where T: Hash + Eq + Clone {
                     self.fnode_list.push(new_node);
                 }
             }
-        }
 
-        Ok(())
+            self.lookup_table.remove(&value);
+            self.lookup_table.insert(value, new_parent);
+
+            Ok(())
+        } else {
+            Err(CacheError::AccessError)
+        }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn cache_creation() {
+        let mut c = Cache::new();
+        c.insert_element(12);
     }
 
-    pub fn access_element(&mut self, value: T) -> Result<(), CacheError> {
-        Ok(())
+    #[test]
+    fn cache_access() {
+        let mut c = Cache::new();
+        c.insert_element(12);
+        c.access_element(12);
     }
 }
