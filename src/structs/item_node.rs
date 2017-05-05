@@ -1,17 +1,15 @@
-use structs::frequency_node::FrequencyNode;
-use std::cell::RefCell;
-use std::rc::Rc;
-
+// Well, let us assume that the parent is simply a frequency node.
 #[derive(Clone)]
 pub struct ItemNode<T> {
-    value: T,
-    parent: Option<Rc<RefCell<FrequencyNode<T>>>>,
+    pub value: T,
+    pub parent: i32,
 }
+
 impl<T> ItemNode<T> {
-    pub fn new(value: T, parent: Rc<RefCell<FrequencyNode<T>>>) -> ItemNode<T> {
+    pub fn new(value: T, parent: i32) -> ItemNode<T> {
         ItemNode {
             value: value,
-            parent: Some(parent),
+            parent: parent,
         }
     }
 }

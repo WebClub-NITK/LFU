@@ -1,13 +1,9 @@
-extern crate ixlist;
-use self::ixlist::List;
-
-use structs::ItemNodeList;
-use structs::ItemNode;
+use structs::item_node::ItemNodeList;
 
 #[derive(Clone)]
 pub struct FrequencyNode<T> {
-    item_nodes: ItemNodeList<T>,
-    value: i32,
+    pub item_nodes: ItemNodeList<T>,
+    pub value: i32,
 }
 
 impl<T> FrequencyNode<T> {
@@ -19,4 +15,12 @@ impl<T> FrequencyNode<T> {
     }
 }
 
-pub type FrequencyNodeList<FrequencyNode> = List<FrequencyNode>;
+impl<T> PartialEq for FrequencyNode<T> {
+    fn eq(&self, other: &FrequencyNode<T>) -> bool {
+        self.value == other.value
+    }
+}
+
+impl<T> Eq for FrequencyNode<T> {}
+
+pub type FrequencyNodeList<FrequencyNode> = Vec<FrequencyNode>;
