@@ -1,26 +1,45 @@
+use std::fmt::{Display, Formatter, Result};
+use std::fmt::Debug;
+use std::collections::HashMap;
 use structs::item_node::ItemNodeList;
 
-#[derive(Clone)]
-pub struct FrequencyNode<T> {
-    pub item_nodes: ItemNodeList<T>,
-    pub value: i32,
+#[derive(Clone, Debug)]
+pub struct Siblings {
+    pub next: Option<i32>,
+    pub prev: Option<i32>,
 }
 
-impl<T> FrequencyNode<T> {
-    pub fn new(value: i32) -> FrequencyNode<T> {
-        FrequencyNode {
-            value: value,
-            item_nodes: ItemNodeList::new(),
+impl Siblings {
+    pub fn new() -> Siblings {
+        Siblings {
+            next: None, 
+            prev: None,
         }
     }
 }
 
-impl<T> PartialEq for FrequencyNode<T> {
-    fn eq(&self, other: &FrequencyNode<T>) -> bool {
-        self.value == other.value
+#[derive(Clone, Debug)]
+pub struct FrequencyNode<T> where T: Display + Debug {
+    pub item_nodes: ItemNodeList<T>,
+    pub freq: i32,
+    pub siblings: Siblings, 
+}
+
+impl<T> FrequencyNode<T> where T: Display + Debug {
+    pub fn new(freq: i32) -> FrequencyNode<T> {
+        FrequencyNode {
+            item_nodes: ItemNodeList::new(),
+            freq: freq, 
+            siblings: Siblings::new(), 
+        }
     }
 }
 
-impl<T> Eq for FrequencyNode<T> {}
+impl<T> Display for FrequencyNode<T> where T: Display + Debug {
+    fn fmt(&self, f: &mut Formatter) -> Result {
+        write!(f, "{:?} {:?} {:?} {:?}", self.freq, self.item_nodes, self.siblings.next, self.siblings.prev)
+    }
+}
 
-pub type FrequencyNodeList<FrequencyNode> = Vec<FrequencyNode>;
+pub type FrequencyNodeArena<T> = HashMap<i32, FrequencyNode<T>>;
+
