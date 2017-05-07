@@ -1,5 +1,6 @@
 use std::collections::HashMap;
-use std::fmt::Display;
+use std::fmt;
+use std::fmt::{Display, Formatter};
 use std::fmt::Debug;
 
 use std::hash::Hash;
@@ -16,7 +17,8 @@ pub enum CacheError {
     EvictError,
 }
 
-pub struct Cache<T> where T: Hash + Display + Debug {
+#[derive(Debug)]
+pub struct Cache<T> where T: Hash + Display + Debug + Eq {
     pub fnode_arena: FrequencyNodeArena<T>,
     pub lookup_table: HashMap<T, i32>,
     // Additional bookkeeping for improving performance.
@@ -42,7 +44,8 @@ impl<T> Cache<T> where T: Hash + Eq + Clone + Copy + Display + Debug {
 
     pub fn insert_element(&mut self, value: T) -> Result<(), CacheError> {
         if self.lookup_table.contains_key(&value) {
-            Err(CacheError::InsertError)
+            // We could either raise an error or consider it as an access for that element.
+            self.access_element(value)
         } else { 
             if self.lowest_freq == MIN_FREQ {
                 if let Some(fnode) = self.fnode_arena.get_mut(&MIN_FREQ) {
@@ -86,11 +89,11 @@ impl<T> Cache<T> where T: Hash + Eq + Clone + Copy + Display + Debug {
                 fnode.item_nodes.retain(|ref x| x.value != value);
                 if fnode.item_nodes.is_empty() {
                     is_empty = true;
-                    old_prev = fnode.siblings.prev;
-                    old_next = fnode.siblings.next;
                 }
+                old_prev = fnode.siblings.prev;
+                old_next = fnode.siblings.next;
             }
-
+            
             if is_empty && old_next.unwrap_or(-1) == new_parent {
                 if let Some(prev_node) = self.fnode_arena.get_mut(&old_prev.unwrap_or(-1)) {
                     prev_node.siblings.next = Some(new_parent);
@@ -191,6 +194,12 @@ impl<T> Cache<T> where T: Hash + Eq + Clone + Copy + Display + Debug {
     }
 }
 
+impl<T> Display for Cache<T> where T: Display + Debug + Hash + Eq {
+    fn fmt(&self, f: &mut Formatter) -> fmt::Result {
+        write!(f, "{:?}", self.fnode_arena)
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -204,6 +213,26 @@ mod tests {
         c.access_element(12);
         assert_eq!(c.evict().ok(), Some(12));
         assert_eq!(c.evict().ok(), Some(23));
+    }
+
+    #[test]
+    fn test_1() {
+        let mut c = Cache::new();
+        c.insert_element(5);
+        c.insert_element(4);
+        c.insert_element(3);
+        c.insert_element(4);
+        c.access_element(5);
+        assert_eq!(c.evict().ok(), Some(3))
+    }
+
+    #[test]
+    fn test_2() {
+        let mut c = Cache::new();
+        c.evict();
+        c.access_element(1);
+        c.insert_element(1);
+        c.insert_element(2);
     }
 }
 
