@@ -10,6 +10,7 @@ use structs::frequency_node::{FrequencyNode, FrequencyNodeArena};
 
 const MIN_FREQ: i32 = 1;
 
+/// Set of labels used to track errors occuring in common Cache operations.
 #[derive(Debug)]
 pub enum CacheError {
     InsertError,
@@ -17,6 +18,21 @@ pub enum CacheError {
     EvictError,
 }
 
+
+/// Least Frequently Used Cache implementation
+/// 
+/// Contains a NodeArena with FrequencyNodes,
+/// a lookup table for finding parent of a particular ItemNode
+/// and a tracker for lowest frequency to facilitate constant time eviction.
+///
+/// # Example
+///
+/// ```
+/// let mut c = Cache::new();
+/// c.insert_element(1);
+/// c.access_element(1);
+/// c.evict();
+/// ```
 #[derive(Debug)]
 pub struct Cache<T> where T: Hash + Display + Debug + Eq {
     pub fnode_arena: FrequencyNodeArena<T>,
@@ -27,6 +43,9 @@ pub struct Cache<T> where T: Hash + Display + Debug + Eq {
 
 // TODO: Add functionality to load existing data onto cache
 impl<T> Cache<T> where T: Hash + Eq + Clone + Copy + Display + Debug {
+    /// Used to create a new Cache instance.
+    ///
+    /// Returns an empty Cache with a fresh NodeArena and a lookup table.
     pub fn new() -> Cache<T> {
         let fnode_arena = FrequencyNodeArena::new();
         let lookup_table = HashMap::new();
@@ -38,10 +57,16 @@ impl<T> Cache<T> where T: Hash + Eq + Clone + Copy + Display + Debug {
         }
     }
 
+    /// Checks if the NodeArena contained by the Cache is empty.
+    ///
+    /// Returns a boolean value.
     pub fn is_empty(&self) -> bool {
         self.fnode_arena.is_empty()
     }
 
+    /// Used to insert a new element in the Cache.
+    ///
+    /// Returns a result element. If the element is already present, it is considered as an access.
     pub fn insert_element(&mut self, value: T) -> Result<(), CacheError> {
         if self.lookup_table.contains_key(&value) {
             // We could either raise an error or consider it as an access for that element.
@@ -74,6 +99,13 @@ impl<T> Cache<T> where T: Hash + Eq + Clone + Copy + Display + Debug {
         }
     }
 
+    /// Used to access a particular element in the Cache.
+    ///
+    /// Returns a Result Element.
+    ///
+    /// # Arguments
+    ///
+    /// * `value`: Value of the element to be accessed.
     pub fn access_element(&mut self, value: T) -> Result<(), CacheError> {
         if !self.lookup_table.contains_key(&value) {
             Err(CacheError::AccessError)
@@ -158,6 +190,9 @@ impl<T> Cache<T> where T: Hash + Eq + Clone + Copy + Display + Debug {
         }
     }
 
+    /// Used to evict the least frequently used element in the Cache.
+    ///
+    /// Returns a Result element with the evicted item value.
     pub fn evict(&mut self) -> Result<T, CacheError> {
         if self.is_empty() {
             Err(CacheError::EvictError)
