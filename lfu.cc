@@ -1,4 +1,4 @@
-#include "LFU.h"
+#include "lfu.h"
 
 LFU::LFU()
 {
