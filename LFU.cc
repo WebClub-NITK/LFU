@@ -1,4 +1,4 @@
-#include "Class prototype.h"
+#include "LFU.h"
 
 LFU::LFU()
 {
